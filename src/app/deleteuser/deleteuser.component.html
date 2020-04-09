@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="card ">
+          <div class="card-header ">
+            <h4 class="card-title">Delete </h4>
+          </div>
+          <div class="card-body ">
+            <div class="form-group has-label"  >
+              <label> Id </label>
+                <input type="text" [(ngModel)]="selectedUser.id" name="id"  class="form-control" />
+            </div>
+            <p>
+              Voulez-vous supprimer ce user ?
+            </p>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              selectedUser=user
+              (click)="deleteDepart()">
+              Delete
+             
+            </button>
+            <span class="help-block" *ngIf="addSucced">La suppression du departement a été effectué avec succès</span>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+
+  
